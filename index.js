@@ -31,6 +31,29 @@
 // sayHi()
 
 // replace method
-const name = 'My Name is Trishan'
+// const name = 'My Name is Trishan'
 
-console.log(name.replace('Trishan', 'Sakira'))
+// console.log(name.replace('Trishan', 'Sakira'))
+
+// javascript string search
+// const str = 'I love Javascript'
+
+// if (str.indexOf('Javascript') > -1) {
+//   console.log('Success')
+// } else {
+//   console.log('Not Success')
+// }
+
+// const inputValue = 'mouse'
+// const products = ['computer', 'keyboard', 'mouse', 'monitor']
+// if (products.indexOf(inputValue) > -1) {
+//   console.log('result success')
+// } else {
+//   console.log('result not success')
+// }
+
+// const text = 'Hello Bangladesh'
+// // const result = text.includes('llo')
+// const result = text.endsWith('Bangladesh')
+
+// console.log(result)
