@@ -57,3 +57,12 @@
 // const result = text.endsWith('Bangladesh')
 
 // console.log(result)
+
+// Numbers Data Type **************
+const num = 12.1265
+
+console.log(num.valueOf())
+console.log(num.toFixed(2))
+console.log(num.toExponential(2))
+console.log(typeof num.toString())
+console.log((123).toString())
