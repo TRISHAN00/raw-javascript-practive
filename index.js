@@ -36,4 +36,54 @@ const makePair = (num1, num2) => {
   return [num1, num2]
 }
 
-console.log(makePair(1, 2))
+// Write a function that takes an integer minutes and converts it to seconds.
+const convert = miniute => {
+  const minToSec = 60
+  return miniute * minToSec
+}
+
+function squared (b) {
+  return b * b
+}
+
+// Write a function that returns the string "something" joined with a space " " and the given argument a.
+const giveMeSomething = text => {
+  return 'something ' + text
+}
+
+// Given two numbers, return true if the sum of both numbers is less than 100. Otherwise return false.
+
+const lessThan100 = (num1, num2) => {
+  return num1 + num2 > 100 ? false : true
+}
+
+// kilometreToMeter
+const kilometerToMeter = kilometre => {
+  return kilometre * 1000 + ' metre'
+}
+
+// budgetCalculator
+const budgetCalculator = (watch, phone, laptop) => {
+  return watch * 50 + phone * 100 + laptop * 500
+}
+
+// hotelCost
+const firstToTen = ten => {
+  return ten * 100
+}
+
+const tenToTwenty = twenty => {
+  return twenty * 80
+}
+
+const unlimitedDays = unlimited => {
+  return unlimited * 50
+}
+
+let days = 2
+
+if (firstToTen && tenToTwenty && unlimitedDays) {
+  return days * firstToTen + tenToTwenty + unlimitedDays
+}
+
+console.log(days)
