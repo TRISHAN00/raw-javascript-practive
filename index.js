@@ -67,23 +67,56 @@ const budgetCalculator = (watch, phone, laptop) => {
   return watch * 50 + phone * 100 + laptop * 500
 }
 
-// hotelCost
-const firstToTen = ten => {
-  return ten * 100
+// megaFriend length
+const megaFriendLength = str => {
+  const strSplit = str.split(' ')
+  let longestWord = 0
+  for (let i = 0; i < strSplit.length; i++) {
+    if (strSplit[i].length > longestWord) {
+      longestWord = strSplit[i].length
+    }
+  }
+  return longestWord
 }
 
-const tenToTwenty = twenty => {
-  return twenty * 80
+const megaFriendSor = str => {
+  let longestWord = str.split(' ').sort((a, b) => {
+    return b.length - a.length
+  })
+  return longestWord[0]
 }
 
-const unlimitedDays = unlimited => {
-  return unlimited * 50
+const arr = ['A', 'B', 'C']
+arr.reverse()
+
+// Problem 3:   hotelCost
+
+function hotelCost (day) {
+  if (day < 0) {
+    return 'Please input a valid day !!'
+  } else {
+    var cost = 0
+    if (day <= 10) {
+      cost = day * 100
+
+      return cost
+    } else if (day <= 20) {
+      var firstTenDay = 10 * 100
+      var remainingDay = day - 10
+      var secondTenDay = remainingDay * 80
+      cost = firstTenDay + secondTenDay
+
+      return cost
+    } else {
+      var firstTenDay = 10 * 100
+      var secondTenDay = 10 * 80
+      var remainingDay = day - 20
+      var totalDay = remainingDay * 50
+      cost = firstTenDay + secondTenDay + totalDay
+
+      return cost
+    }
+  }
 }
 
-let days = 2
 
-if (firstToTen && tenToTwenty && unlimitedDays) {
-  return days * firstToTen + tenToTwenty + unlimitedDays
-}
-
-console.log(days)
