@@ -118,5 +118,3 @@ function hotelCost (day) {
     }
   }
 }
-
-
