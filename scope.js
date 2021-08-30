@@ -9,12 +9,13 @@
 
 var x = 10
 
-const myFunc = () => {
-  x = 21
-  if (x > 10) {
-    // console.log(`${x} is bigger than 10`)
-  } else {
-    // console.log(`${x} is not bigger than 10`)
-  }
+function myFunc () {
+  // console.log(x)
 }
 myFunc()
+
+function letFunc () {
+  let letName = 10
+}
+console.log(letName)
+letFunc()
