@@ -7,6 +7,7 @@
  *
  */
 
+// var
 var x = 10
 
 function myFunc () {
@@ -14,8 +15,23 @@ function myFunc () {
 }
 myFunc()
 
+// let
 function letFunc () {
   let letName = 10
+  letName = 'Rishan'
 }
-console.log(letName)
 letFunc()
+
+// const
+function constFunc () {
+  // const constName = 'Trishan'
+  const constObject = {
+    name: 'Jhone',
+    age: 35,
+    gender: 'name'
+  }
+  constObject.name = 'Trishan'
+  // console.log(constObject) // output = 'Trishan'
+}
+
+constFunc()
