@@ -30,9 +30,17 @@ var exampleThreeVar1 = 55
 
 var threeFunc = function () {
   var exampleThreeVar2 = 66
+  var exampleThreeVar3 = 77
   return function () {
-    return exampleThreeVar1
+    return exampleThreeVar3
   }
 }
-const threeBal = threeFunc()
-console.dir(threeBal)
+
+// Example
+
+const fetchFunc = url => {
+  const dataUrl = url
+  return fetch(dataUrl).then(res => res.json())
+  // .then(data => console.log(data))
+}
+fetchFunc('https://jsonplaceholder.typicode.com/todos/')
