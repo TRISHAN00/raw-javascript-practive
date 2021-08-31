@@ -40,7 +40,13 @@ var threeFunc = function () {
 
 const fetchFunc = url => {
   const dataUrl = url
-  return fetch(dataUrl).then(res => res.json())
-  // .then(data => console.log(data))
+  return fetch(dataUrl)
+    .then(res => res.json())
+    .then(data => data)
 }
-fetchFunc('https://jsonplaceholder.typicode.com/todos/')
+
+const fetchOutput = fetchFunc()
+console.dir(fetchOutput)
+
+// const fetchOutput = fetchFunc('https://jsonplaceholder.typicode.com/todos/')
+// console.dir(fetchOutput)
