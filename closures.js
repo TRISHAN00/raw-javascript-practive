@@ -14,7 +14,7 @@ var doubleFunc = function () {
 const doubleVar = doubleFunc()
 // console.dir(doubleVar)
 
-// Example - 2
+// Example - 2 ================
 function bankAccount (initialeBalance) {
   var balance = initialeBalance
   return function () {
@@ -23,5 +23,16 @@ function bankAccount (initialeBalance) {
 }
 
 const account = bankAccount(100000)
+// console.dir(account)
 
-// console.log(account())
+// example - 3 ================
+var exampleThreeVar1 = 55
+
+var threeFunc = function () {
+  var exampleThreeVar2 = 66
+  return function () {
+    return exampleThreeVar1
+  }
+}
+const threeBal = threeFunc()
+console.dir(threeBal)
