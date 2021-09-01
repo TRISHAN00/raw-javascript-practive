@@ -81,7 +81,30 @@ function Person (name, age) {
 }
 
 const sakib = Person('Sakib', 36)
-console.log(`${sakib.eat()} and ${sakib.sleep()}`)
+// console.log(`${sakib.eat()} and ${sakib.sleep()}`)
 
 const tamim = Person('Tamim', 35)
-console.log(tamim.eat() + ' and' + tamim.sleep())
+// console.log(tamim.eat() + ' and' + tamim.sleep())
+
+// Example - 6
+const studentMethod = {
+  firstExam () {
+    return `it was first exam`
+  },
+  secondExam () {
+    return `it was second exam`
+  }
+}
+
+function Student (name, gpa, marks) {
+  const student = Object.create(studentMethod)
+
+  student.name = name
+  student.gpa = gpa
+  student.marks = marks
+
+  return student
+}
+
+const akib = Student('Akib', 4.4, 780)
+console.log(akib.secondExam())
