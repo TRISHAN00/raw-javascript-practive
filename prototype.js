@@ -37,3 +37,11 @@ function Person (name, age, gender) {
 
   return person
 }
+
+// Example - 3
+function Student (name, className, roll) {
+  return `student name is ${name} and read in class ${className} roll is ${roll}`
+}
+
+const trishan = Student('Trishan Saha', 12, 2)
+console.log(trishan)
