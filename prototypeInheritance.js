@@ -48,14 +48,23 @@
 // console.log(sakib.eat())
 // console.log(tamim.eat())
 
-// example - 3
-function Person (name, age) {
-  //   const person = Object.create(personMethod)
+// Example - 3
+Object.prototype.trishan = function () {
+  console.log('I am trishan')
+}
+const p = {}
+p.trishan()
 
+// example - 4
+function Person (name, age) {
   this.name = name
   this.age = age
+}
 
-  //   return person
+function Cricketer (country, type, name, age) {
+  Person.call(this)
+  this.country = country
+  this.type = type
 }
 
 Person.prototype = {
@@ -67,7 +76,11 @@ Person.prototype = {
   }
 }
 
-const sakib = new Person('sakib', 35)
-const tamim = new Person('tamim', 38)
-console.log(sakib.eat())
-console.log(tamim.eat())
+Cricketer.prototype = Person
+
+const sakib = new Cricketer('bangladesh', 'all rounder', 'sakib', 35)
+
+// const sakib = new Person('sakib', 35)
+// const tamim = new Person('tamim', 38)
+// console.log(sakib.eat())
+// console.log(tamim.eat())
