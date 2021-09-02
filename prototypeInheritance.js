@@ -49,11 +49,11 @@
 // console.log(tamim.eat())
 
 // Example - 3
-Object.prototype.trishan = function () {
-  console.log('I am trishan')
-}
-const p = {}
-p.trishan()
+// Object.prototype.trishan = function () {
+//   console.log('I am trishan')
+// }
+// const p = {}
+// p.trishan()
 
 // example - 4
 function Person (name, age) {
@@ -61,8 +61,10 @@ function Person (name, age) {
   this.age = age
 }
 
-function Cricketer (country, type, name, age) {
+function Cricketer (name, age, country, type) {
   Person.call(this)
+  this.name = name
+  this.age = age
   this.country = country
   this.type = type
 }
@@ -76,11 +78,8 @@ Person.prototype = {
   }
 }
 
-Cricketer.prototype = Person
+Cricketer.prototype = Object.create(Person.prototype)
+Cricketer.prototype.constructor = Cricketer
 
-const sakib = new Cricketer('bangladesh', 'all rounder', 'sakib', 35)
-
-// const sakib = new Person('sakib', 35)
-// const tamim = new Person('tamim', 38)
-// console.log(sakib.eat())
-// console.log(tamim.eat())
+const sakib = new Cricketer('sakib', 'all rounder', 'bangladesh', 35)
+console.log(sakib.eat())
