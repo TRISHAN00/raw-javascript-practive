@@ -4,11 +4,5 @@ function Person (name, age) {
   this.age = age
 }
 
-function Cricket (type, hand, name, age) {
-  Object.create
-  this.type = type
-  this.hand = hand
-}
-
-const sakib = new Cricket('all rounder', 'left', 'sakib', 36)
+const sakib = new Person('sakib', 44)
 console.log(sakib)
