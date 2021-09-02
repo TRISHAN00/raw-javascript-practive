@@ -80,6 +80,9 @@ Person.prototype = {
 
 Cricketer.prototype = Object.create(Person.prototype)
 Cricketer.prototype.constructor = Cricketer
+Cricketer.prototype.play = function () {
+  console.log(`${this.name} is playing`)
+}
 
 const sakib = new Cricketer('sakib', 'all rounder', 'bangladesh', 35)
-console.log(sakib.eat())
+console.log(sakib.play())
