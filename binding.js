@@ -63,9 +63,10 @@ const v1 = 'Handsome'
 const v2 = 'All-rounder'
 const v3 = 'Smart'
 
-const v = [v1, v2, v3]
+// const v = [v1, v2, v3]
 
-printName.apply(sakib, v)
+const myFunc = printName.bind(sakib, v1, v2, v3)
+myFunc()
 
 // printName.call(tamim, v1, v2, v3)
 // printName.call(sakib, v1, v2, v3)
