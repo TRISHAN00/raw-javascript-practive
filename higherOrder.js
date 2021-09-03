@@ -80,7 +80,8 @@ const players = [
   }
 ]
 
-// const result = []
+const playersWithAvr = players.filter(player => player.avr > 37)
+console.log(playersWithAvr)
 
 // for (let i = 0; i < players.length; i++) {
 //   players[i].avr > 37 ? result.push(players[i]) : false
