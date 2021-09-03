@@ -51,11 +51,39 @@
 // }
 // console.log(result)
 
-// Example - 5 usgin higher order function
-// make a array
-const numbers = [1, 2, 3, 4]
-const result = numbers.map(number => {
-  return number * 2
-})
+// // Example - 5 usgin higher order function
+// // make a array
+// const numbers = [1, 2, 3, 4]
+// const result = numbers.map(number => {
+//   return number * 2
+// })
 
-console.log(result)
+// console.log(result)
+
+// Example - 6
+const players = [
+  {
+    name: 'Sakib',
+    avr: 38.58
+  },
+  {
+    name: 'Tamim',
+    avr: 37.44
+  },
+  {
+    name: 'Mosh',
+    avr: 35.55
+  },
+  {
+    name: 'Sommo',
+    avr: 35.14
+  }
+]
+
+// const result = []
+
+// for (let i = 0; i < players.length; i++) {
+//   players[i].avr > 37 ? result.push(players[i]) : false
+// }
+
+// console.log(result)
