@@ -48,8 +48,28 @@ const orderCompleted = customer => {
   console.log(`order completed for ${customer}`)
 }
 
-takeOrder('customer 2', customer => {
-  processOrder(customer, customer => {
-    orderCompleted(customer)
-  })
+// takeOrder('customer 2', customer => {
+//   processOrder(customer, customer => {
+//     orderCompleted(customer)
+//   })
+// })
+
+// Meeting example - 4
+const hasMeeting = false
+
+const meeting = new Promise((resolve, reject) => {
+  if (!hasMeeting) {
+    const meetingDetail = {
+      name: 'Technical Meeting',
+      time: '10:00 PM',
+      location: 'Google Meet'
+    }
+    resolve(meetingDetail)
+  } else {
+    reject(new Error('Meeting already scheduled'))
+  }
 })
+
+meeting
+  .then(res => console.log(JSON.stringify(res)))
+  .catch(err => console.log(err.message))
