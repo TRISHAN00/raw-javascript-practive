@@ -11,3 +11,18 @@
 // console.log('take order from customer 1')
 // processOrder()
 // console.log('completed order for customer 1')
+
+// Asynchronous
+const processOrder = customer => {
+  console.log('process order for customer')
+
+  setTimeout(() => {
+    console.log('cooking food for customer 1')
+  }, 3000)
+
+  console.log('ready food for serve to customer 1')
+}
+
+console.log('take order for customer 1')
+processOrder()
+console.log('complete order for customer 1')
