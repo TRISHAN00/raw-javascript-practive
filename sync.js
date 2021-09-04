@@ -53,5 +53,3 @@ takeOrder('customer 2', customer => {
     orderCompleted(customer)
   })
 })
-
-// Example - 4
